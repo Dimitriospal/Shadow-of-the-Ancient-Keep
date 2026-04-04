@@ -4,17 +4,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         GameLoader loader = new GameLoader();
-        Scanner scanner = new Scanner(System.in); // Προσθήκη Scanner για την Εβδ. 2
+        Scanner scanner = new Scanner(System.in); // Προσθήκη Scanner για την Εβδ. 4
 
         try {
             List<Room> rooms = loader.loadRooms("src/main/resources/world.json");
             Player player = new Player();
             player.setCurrentRoom(rooms.get(0));
 
-            // Week 3: λογική εντολών (go, look, inventory, exit) στον CommandParser
+            // Week 4: λογική εντολών (go, look, inventory, exit) στον CommandParser
             CommandParser parser = new CommandParser();
 
-            System.out.println("--- Progress Update: Week 2 Interaction ---");
+            System.out.println("--- Progress Update: Week 4 Interaction ---");
 
             // Game Loop
             boolean running = true;
