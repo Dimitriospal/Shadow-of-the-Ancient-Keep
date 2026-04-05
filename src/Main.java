@@ -23,8 +23,9 @@ public class Main {
                 // Αυτό τυπώνει τις διαθέσιμες εξόδους αυτόματα από το Map του Κώστα
                 System.out.println("Έξοδοι: " + player.getCurrentRoom().exits.keySet());
                 System.out.println("Έξτρα εντολές: look, inventory, exit");
-                System.out.println("Που θα πας:");
+                System.out.print("Που θα πας:");
                 String input = scanner.nextLine().toLowerCase();
+                System.out.print("\n");
 
                 CommandParser.ProcessResult result = parser.process(input, player, rooms);
                 if (result == CommandParser.ProcessResult.EXIT) {
