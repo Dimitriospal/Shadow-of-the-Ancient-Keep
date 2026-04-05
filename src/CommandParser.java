@@ -36,7 +36,14 @@ public class CommandParser {
         Room room = player.getCurrentRoom();
         System.out.println(room.description);
         if (room.items != null && !room.items.isEmpty()) {
-            System.out.println("Στο χώρο βλέπεις: [" + String.join(", ", room.items) + "]");
+            System.out.print("Στο χώρο βλέπεις: ");
+            for (int i = 0; i < room.items.size(); i++) {
+                // Παίρνουμε το .id από το Item object
+                System.out.print(room.items.get(i).id);
+                if (i < room.items.size() - 1) {
+                    System.out.print(", ");
+                }
+            }
         }
     }
 
